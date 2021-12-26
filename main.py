@@ -1,0 +1,16 @@
+import os, time
+
+print("STARTING...")
+print("host myip.opendns.com resolver1.opendns.com")
+os.system("wget -O mc.zip https://minecraft.azureedge.net/bin-linux/bedrock-server-1.18.2.03.zip")
+print("Fetched")
+time.sleep(5)
+os.system("unzip mc.zip")
+print("Unzip")
+os.system("chmod + *")
+time.sleep(5)
+print("Ngrok starting... ")
+os.system('ngrok tcp -region us 25565 &')
+time.sleep(5)
+print("Starting Server...")
+os.system("./bedrock_server")
