@@ -13,7 +13,7 @@ os.system("nohup ./start.sh --no-wizard > server.out &")
 
 while True:
     time.sleep(10)
-    result = open('nohup.out', 'r').read().find('Done')
+    result = open('server.out', 'r').read().find('Done')
     if result > -1:
         print("Started...")
         break
@@ -23,7 +23,7 @@ os.system('ngrok tcp -region us 19132 &')
 
 
 while True:
-    result = open('nohup.out', 'r').read()
+    result = open('server.out', 'r').read()
     print(result)
     time.sleep(30)
 
