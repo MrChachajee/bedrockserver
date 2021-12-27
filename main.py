@@ -25,7 +25,7 @@ while True:
         break
 
 print("Ngrok starting... ")
-os.system('ngrok udp -region us 19132 &')
+os.system('ngrok http -region us 19132 &')
 
 while True:
     result2 = open('server.out', 'r').read()
