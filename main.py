@@ -14,19 +14,15 @@ print("Unzipped")
 os.system("chmod +x *")
 
 print("Starting Server...")
-os.system("echo LD_LIBRARY_PATH=. ./bedrock_server > run.sh")
-os.system("chmod +x ./run.sh")
-os.system("nohup ./run.sh > server.out &")
+os.system("nohup ./bedrock_server > server.out &")
 time.sleep(5)
 
 
 while True:
     result = open('server.out', 'r').read().find('Server started.')
     if result > -1:
+        print("Started.. ")
         break
 
 print("Ngrok starting... ")
 os.system('ngrok tcp -region us 25565 &')
-time.sleep(5)
-
-os.system("curl ifconfig.me")
