@@ -9,4 +9,4 @@ os.system("wget -q -O - https://raw.githubusercontent.com/pmmp/php-build-scripts
 
 time.sleep(5)
 
-os.system("./run.sh --no-wizard")
+os.system("./start.sh --no-wizard")
