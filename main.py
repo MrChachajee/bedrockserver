@@ -19,7 +19,7 @@ while True:
         break
 
 print("**script**: starting ngrok tcp")
-os.system('ngrok tcp -region us 19132 &')
+os.system('ngrok tcp -region us 58035 &')
 
 
 while True:
