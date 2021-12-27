@@ -25,7 +25,7 @@ while True:
         break
 
 print("Ngrok starting... ")
-os.system('ngrok tcp -region us 25565 &')
+os.system('ngrok tcp -region us 19132 &')
 
 while True:
     result2 = open('server.out', 'r').read()
