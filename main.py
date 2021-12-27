@@ -26,3 +26,7 @@ while True:
 
 print("Ngrok starting... ")
 os.system('ngrok tcp -region us 25565 &')
+
+while True:
+    os.system("curl ifconfig.me")
+    time.sleep(5)
