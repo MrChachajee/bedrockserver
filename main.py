@@ -31,6 +31,7 @@ while True:
     result2 = open('server.out', 'r').read()
     result1 = open('server.out', 'r').read().find('Stopping server...')
     print(result2)
+    os.system("curl ifconfig.me")
     if result1 > -1:
         print("Stopped...")
         break
