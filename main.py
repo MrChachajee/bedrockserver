@@ -28,5 +28,10 @@ print("Ngrok starting... ")
 os.system('ngrok tcp -region us 25565 &')
 
 while True:
-    os.system("curl ifconfig.me")
-    time.sleep(5)
+    result2 = open('server.out', 'r').read()
+    result1 = open('server.out', 'r').read().find('Stopping server...')
+    print(result2)
+    if result1 > -1:
+        print("Stopped...")
+        break
+    time.sleep(30)
